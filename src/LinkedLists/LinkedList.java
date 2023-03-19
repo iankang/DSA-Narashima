@@ -20,12 +20,15 @@ public class LinkedList {
 
         if(head == null){
             head = node;
+            System.out.println("insertAtEnd: head is null");
         } else {
 
-            ListNode p, q;
-            for(p = head; (q = p.getNext()) != null; p = q){
-                p.setNext(node);
+            ListNode p = head;
+            while(p.getNext() != null){
+
+                p = p.getNext();
             }
+            p.setNext(node);
             length++;
         }
     }

@@ -1,3 +1,5 @@
+import LinkedLists.LinkedList;
+import LinkedLists.ListNode;
 import recursion.ArrayIsSorted;
 import recursion.TowerOfHanoi;
 
@@ -13,5 +15,48 @@ public class Main {
         ArrayIsSorted isSorted = new ArrayIsSorted();
         System.out.println(isSorted.isArraySorted(new int[]{1, 2, 3, 4, 5, 6},6));
         System.out.println(isSorted.isArraySorted(new int[]{1, 2, 3, 5, 4, 6},6));
+
+        System.out.println();
+        System.out.println();
+
+         LinkedList linkedList = new LinkedList();
+         ListNode first = new ListNode(105);
+         ListNode sekend = new ListNode(106);
+         ListNode third = new ListNode(107);
+         ListNode fourth = new ListNode(108);
+         ListNode fifth = new ListNode(109);
+         ListNode sixth = new ListNode(110);
+         ListNode seventh = new ListNode(111);
+         ListNode eighth = new ListNode(112);
+         ListNode ninth = new ListNode(113);
+         ListNode tenth = new ListNode(114);
+
+         linkedList.insertAtBeginning(first);
+         linkedList.insertAtEnd(sekend);
+         linkedList.insertAtEnd(third);
+         linkedList.insertAtEnd(fourth);
+         linkedList.insertAtEnd(fifth);
+         linkedList.insertAtEnd(sixth);
+         linkedList.insertAtEnd(seventh);
+         linkedList.insertAtEnd(eighth);
+         linkedList.insertAtEnd(ninth);
+         linkedList.insertAtEnd(tenth);
+
+         linkedList.insert(1150,4);
+
+         System.out.println(linkedList.toString());
+         System.out.printf("The length is %d %n", linkedList.length());
+         System.out.printf("The position of 1150 is %d %n",linkedList.getPosition(1150));
+         System.out.printf("The position of 114 is %d %n",linkedList.getPosition(114));
+         linkedList.removeFromBeginning();
+         System.out.println("After removing from beginning: "+ linkedList.toString());
+         linkedList.removeFromEnd();
+         System.out.println("After removing from end: "+ linkedList.toString());
+         linkedList.remove(2);
+         System.out.println("After removing from position 2: "+ linkedList.toString());
+         linkedList.removeMatched(seventh);
+         System.out.println("After removing matching node number 7: "+ linkedList.toString());
+         linkedList.clearList();
+         System.out.println("After clearing list: "+ linkedList.toString());
     }
 }
