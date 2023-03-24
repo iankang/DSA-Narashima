@@ -1,5 +1,6 @@
 import LinkedLists.LinkedList;
 import LinkedLists.ListNode;
+import doublyLinkedLists.DoublyLinkedList;
 import recursion.ArrayIsSorted;
 import recursion.TowerOfHanoi;
 
@@ -58,5 +59,22 @@ public class Main {
          System.out.println("After removing matching node number 7: "+ linkedList.toString());
          linkedList.clearList();
          System.out.println("After clearing list: "+ linkedList.toString());
+
+        DoublyLinkedList dll = new DoublyLinkedList();
+        dll.insertTail(42);
+        dll.insertTail(420);
+        dll.insertTail(4123);
+        dll.insertTail(134);
+        dll.insertTail(345);
+        dll.insertTail(6543);
+        dll.insertTail(34);
+        dll.insertTail(57);
+        System.out.println("added some elements "+dll.toString());
+
+        System.out.println("getting at position 2: "+ dll.get(2));
+        dll.insert(52);
+        System.out.println("Inserting a random number "+ dll.toString());
+        dll.insert(566,5);
+        System.out.println("Inserting a random number at position 3 "+ dll.toString());
     }
 }

@@ -14,6 +14,21 @@ public class DoublyLinkedList {
     }
 
     public int get(int position){
+        if(position < 0){
+
+            return Integer.MIN_VALUE;
+        }
+        if (position > length){
+
+            return  Integer.MIN_VALUE;
+        }
+        if(head != null){
+            DLLNode temp = head;
+            for(int i = 1; i <= position; i++){
+                temp = temp.getNext();
+            }
+            return temp.getData();
+        }
         return Integer.MIN_VALUE;
     }
 
@@ -35,8 +50,9 @@ public class DoublyLinkedList {
     }
 
     public void insert(int newValue){
-        DLLNode newNode = new DLLNode(newValue,null, head.getNext());
-        newNode.getNext().setPrev(newNode);
+        DLLNode thisHead = head;
+        DLLNode newNode = new DLLNode(newValue,null,thisHead);
+        thisHead.setPrev(newNode);
         head = newNode;
         length+=1;
     }
@@ -55,12 +71,12 @@ public class DoublyLinkedList {
         }
 
         else if(position == 0){
-            DLLNode temp = new DLLNode(data);
-            temp.setNext(head);
+            DLLNode temp = new DLLNode(data,null, head);
+            head.setPrev(temp);
             head = temp;
         } else {
-            DLLNode temp = new DLLNode(data);
-            for(int i = 1; i < position; i++){
+            DLLNode temp = head;
+            for(int i = 1; i < position; i+=1){
                 temp = temp.getNext();
             }
 

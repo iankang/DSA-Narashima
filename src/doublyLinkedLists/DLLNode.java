@@ -8,8 +8,8 @@ public class DLLNode {
 
     public DLLNode(int data) {
         this.data = data;
-        prev = null;
-        next = null;
+        this.prev = null;
+        this.next = null;
     }
 
     public DLLNode(int data, DLLNode prev, DLLNode next) {
