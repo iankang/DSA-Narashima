@@ -53,7 +53,7 @@ public class DoublyLinkedList {
         DLLNode thisHead = head;
         DLLNode newNode = new DLLNode(newValue,null,thisHead);
         thisHead.setPrev(newNode);
-        head = newNode;
+        this.head = newNode;
         length+=1;
     }
 
@@ -178,7 +178,12 @@ public class DoublyLinkedList {
                     result += "," + temp.getData();
                     temp = temp.getNext();
                 }
-        return result + "]"; }
+        return result + "]";
+    }
+
+    public void customMessage(String message){
+        System.out.printf("%s: %s\n",message,toString());
+    }
     public void clearList(){ head = null;
         tail = null;
         length = 0;

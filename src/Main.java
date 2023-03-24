@@ -76,5 +76,10 @@ public class Main {
         System.out.println("Inserting a random number "+ dll.toString());
         dll.insert(566,5);
         System.out.println("Inserting a random number at position 3 "+ dll.toString());
+        dll.customMessage("remove the head "+dll.removeHead());
+        dll.customMessage("remove the tail " + dll.removeTail());
+        dll.customMessage("get data position  " + dll.getPosition(345));
+        dll.remove(6);
+        dll.customMessage("remove item at position 6");
     }
 }
