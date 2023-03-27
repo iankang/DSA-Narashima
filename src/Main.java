@@ -1,11 +1,12 @@
 import LinkedLists.LinkedList;
 import LinkedLists.ListNode;
-import doublyLinkedLists.DoublyLinkedList;
+import LinkedLists.doublyLinkedLists.DoublyLinkedList;
 import recursion.ArrayIsSorted;
 import recursion.TowerOfHanoi;
+import stack.arrayStack.FixedSizeArrayAction;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         TowerOfHanoi tower = new TowerOfHanoi();
         tower.hanoiTower(3,'A','C','B');
@@ -81,5 +82,8 @@ public class Main {
         dll.customMessage("get data position  " + dll.getPosition(345));
         dll.remove(6);
         dll.customMessage("remove item at position 6");
+
+        FixedSizeArrayAction fixedSizeArrayAction = new FixedSizeArrayAction();
+        fixedSizeArrayAction.action();
     }
 }
