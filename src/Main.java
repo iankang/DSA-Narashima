@@ -4,6 +4,7 @@ import LinkedLists.doublyLinkedLists.DoublyLinkedList;
 import recursion.ArrayIsSorted;
 import recursion.TowerOfHanoi;
 import stack.arrayStack.FixedSizeArrayAction;
+import stack.linkedListStack.LinkedStackAction;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -85,5 +86,8 @@ public class Main {
 
         FixedSizeArrayAction fixedSizeArrayAction = new FixedSizeArrayAction();
         fixedSizeArrayAction.action();
+
+        LinkedStackAction linkedStackAction = new LinkedStackAction();
+        linkedStackAction.showLinkedStackInAction();
     }
 }
