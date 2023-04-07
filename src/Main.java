@@ -1,3 +1,5 @@
+import LinkedLists.CircularLinkedList.CircularLinkedList;
+import LinkedLists.CircularLinkedList.CircularLinkedListAction;
 import LinkedLists.LinkedList;
 import LinkedLists.ListNode;
 import LinkedLists.doublyLinkedLists.DoublyLinkedList;
@@ -89,5 +91,8 @@ public class Main {
 
         LinkedStackAction linkedStackAction = new LinkedStackAction();
         linkedStackAction.showLinkedStackInAction();
+
+        CircularLinkedListAction circularLinkedListAction = new CircularLinkedListAction();
+        circularLinkedListAction.action();
     }
 }

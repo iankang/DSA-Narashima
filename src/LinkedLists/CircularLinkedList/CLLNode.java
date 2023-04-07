@@ -7,6 +7,7 @@ public class CLLNode {
 
     public CLLNode(int data) {
         this.data = data;
+        this.next = null;
     }
 
     public CLLNode getNext() {
