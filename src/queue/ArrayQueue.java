@@ -20,8 +20,7 @@ public class ArrayQueue {
         rear = 0 ;
     }
 
-    public void enqueue(int data) throws NullPointerException,IllegalStateException{
-
+    public void enqueue(int data){
         if(size == CAPACITY){
             throw new IllegalStateException("Queue is full: Overflow");
         } else {
