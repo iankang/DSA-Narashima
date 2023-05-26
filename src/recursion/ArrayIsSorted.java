@@ -1,7 +1,6 @@
 package recursion;
 
 public class ArrayIsSorted {
-
     public int isArraySorted(int[] A, int index){
         if(A.length == 1 || index == 1){
             return 1;
